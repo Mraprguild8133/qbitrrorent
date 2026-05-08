@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: telegram-qbittorrent-bot
+    runtime: image
+    repo: https://github.com/yourusername/telegram-qbittorrent-bot
+    plan: free
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: QBITTORRENT_HOST
+        value: http://your-qbit-host:8080
+      - key: QBITTORRENT_USERNAME
+        sync: false
+      - key: QBITTORRENT_PASSWORD
+        sync: false
+      - key: ALLOWED_USERS
+        sync: false
+      - key: ADMIN_IDS
+        sync: false
